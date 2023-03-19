@@ -1,0 +1,13 @@
+.imgContainer img {
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  color: #ffffffae;
+}
+
+.imgTitleContainer img {
+  max-width: 100%;
+  height: auto;
+}
