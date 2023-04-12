@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, styled, Button, Typography } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 import { theme } from "../../theme";
 import bgtransparent from "../../assets/bgtransparent.png";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
@@ -33,10 +33,10 @@ const MainBox = styled(Box)(({ theme }) => ({
 }));
 const AboutBox = styled(Box)(({ theme }) => ({
   display: "flex",
-  alignItems: "flex-start",
+  alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
-  gap: theme.spacing(5),
+  gap: theme.spacing(3),
   direction: "rtl",
   // textAlign: "center",
   width: "100%",
@@ -46,7 +46,7 @@ const AboutBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("lg")]: {
     flexDirection: "column",
     alignItems: "center",
-    textAlign: "center",
+    textAlign: "right",
   },
 }));
 
@@ -126,22 +126,32 @@ const Home = () => {
         </Box>
       </MainBox>
       <AboutBox>
-        <Typography variant="h5" width="15rem" sx={{ borderBottom: "5px solid #2d8f91" }}>
-          אודות
-        </Typography>
+        <Box sx={{ width: "100%" }}>
+          <Typography variant="h5" width="15rem" sx={{ borderBottom: "5px solid #2d8f91", alignSelf: "right" }}>
+            אודות
+          </Typography>
+        </Box>
+
         <Box
           sx={{
+            width: "100%",
             display: "flex",
-            justifyContent: "spaces-between",
-            alignItems: "center",
+            justifyContent: "space-between",
+            alignItems: "center ",
             flexDirection: { xs: "column", sm: "column", lg: "row" },
             gap: "0.5rem",
-            textAlign: "right",
           }}>
-          <Typography sx={{ whiteSpace: "break-spaces", width: { xs: "100%", sm: "100%", lg: "60%" } }}>
-            {text.about}
-          </Typography>
+          <Box sx={{ width: "100%", alignSelf: "flex-start" }}>
+            <Typography sx={{ whiteSpace: "break-spaces" }}>{text.about}</Typography>
+          </Box>
+
           <Box component="img" sx={{ content: `url(${liorimg})`, width: { xs: "100%", sm: "50%", lg: "35%" } }} />
+        </Box>
+        <Box>
+          {" "}
+          <Typography sx={{ whiteSpace: "break-spaces", width: "100%", fontStyle: "italic" }}>
+            {text.aboutBottom}
+          </Typography>
         </Box>
       </AboutBox>
     </Box>
