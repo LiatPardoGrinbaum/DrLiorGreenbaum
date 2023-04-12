@@ -1,7 +1,7 @@
 import { Box, styled, Typography } from "@mui/material";
 import { text } from "../../text/text";
 
-// import { theme } from "../../theme";
+import { theme } from "../../theme";
 
 const AboutBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -43,22 +43,32 @@ const NeuroConsult = () => {
         }}>
         <Box
           sx={{
-            width: "100%",
-            backgroundColor: "primary.light",
+            width: { sm: "100%", lg: "80%" },
+            backgroundColor: "secondary.light",
             color: "primary.dark",
             fontStyle: "italic",
             alignSelf: "center",
             padding: { xs: "1rem", lg: "2rem 6rem" },
+            margin: "1rem",
             borderRadius: "1rem",
+            borderBottom: `10px solid ${theme.palette.primary.main}`,
+            borderTop: `10px solid ${theme.palette.primary.main}`,
           }}>
           <Typography sx={{ whiteSpace: "break-spaces", fontSize: { sm: "1.8rem" }, textAlign: "center" }}>
             {text.neuroConsultationIntro}
           </Typography>
         </Box>
         <Box sx={{ width: "100%" }}>
-          <Typography sx={{ whiteSpace: "break-spaces" }}>
-            <div dangerouslySetInnerHTML={{ __html: text.neuroConsultation }} />
+          <Typography variant="h6" sx={{ fontStyle: "bold", color: "primary.main" }}>
+            תהליך הייעוץ:
           </Typography>
+          <Typography sx={{ whiteSpace: "break-spaces" }}>
+            <div dangerouslySetInnerHTML={{ __html: text.neuroConsultation1 }} />
+          </Typography>
+          <Typography variant="h6" sx={{ fontStyle: "bold", color: "primary.main" }}>
+            תפיסת עולמי המקצועית:
+          </Typography>
+          <Typography sx={{ whiteSpace: "break-spaces" }}>{text.neuroConsultation2}</Typography>
         </Box>
       </Box>
     </AboutBox>
