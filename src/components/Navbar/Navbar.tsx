@@ -13,39 +13,11 @@ import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
 import { StyledToolbar, CallBox, CustomMenuIcon } from "./styles";
 import { NavHashLink } from "react-router-hash-link";
-// import { Link } from "react-router-dom";
-// import { NavHashLink } from "react-router-hash-link";
-// import ExpandLess from "@mui/icons-material/ExpandLess";
-// import ExpandMore from "@mui/icons-material/ExpandMore";
 
 const boxSX = {
   textDecoration: "none",
   color: "black",
 };
-
-// const buttonSX = {
-//   color: "black",
-//   padding: "0px 10px",
-//   height: "40px",
-//   "&:hover": {
-//     color: "primary.main",
-//   },
-// };
-
-// const buttonListSx = {
-//   // color: theme.palette.secondary.main,
-//   display: "flex",
-//   justifyContent: "center",
-//   alignItems: "center",
-//   textAlign: "center",
-//   padding: "0",
-//   color: "black",
-//   // padding: "0px 10px",
-//   height: "40px",
-//   "&:hover": {
-//     color: "primary.main",
-//   },
-// };
 
 //transition for dialog menu
 const Transition = React.forwardRef(function Transition(
@@ -169,7 +141,8 @@ const Navbar = () => {
 
           <ButtonHashLink linkto="/#about" text="  סוגי בדיקות" />
           <ButtonHashLink linkto="/treatments" text=" תחומי התמחות" />
-          <ButtonHashLink linkto="/#aboutMe" text="  ייעוץ נוירוגנטי " />
+          <ButtonHashLink linkto="/#neuroConsult" text="  ייעוץ נוירוגנטי " />
+          <ButtonHashLink linkto="/#about" text="אודות" />
           <ButtonHashLink linkto="/#home" text="  בית" />
         </Box>
         <NavHashLink to="/#home" style={{ textDecoration: "none" }}>

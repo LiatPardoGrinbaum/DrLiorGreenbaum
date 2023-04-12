@@ -4,8 +4,8 @@ import { theme } from "../../theme";
 import bgtransparent from "../../assets/bgtransparent.png";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import { text } from "../../text/text";
-import liorimg from "../../assets/liorimg.jpeg";
+import About from "../About/About";
+import NeuroConsult from "../NeuroConsult/NeuroConsult";
 
 import "../Home/style.css";
 
@@ -31,28 +31,11 @@ const MainBox = styled(Box)(({ theme }) => ({
     textAlign: "center",
   },
 }));
-const AboutBox = styled(Box)(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-  gap: theme.spacing(3),
-  direction: "rtl",
-  // textAlign: "center",
-  width: "100%",
-  padding: "2rem",
-  // background: theme.palette.primary.light,
-
-  [theme.breakpoints.down("lg")]: {
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "right",
-  },
-}));
 
 const Home = () => {
   return (
     <Box
+      id="home"
       minHeight="100vh"
       width="100%"
       sx={{
@@ -125,35 +108,8 @@ const Home = () => {
           </Box>
         </Box>
       </MainBox>
-      <AboutBox>
-        <Box sx={{ width: "100%" }}>
-          <Typography variant="h5" width="15rem" sx={{ borderBottom: "5px solid #2d8f91", alignSelf: "right" }}>
-            אודות
-          </Typography>
-        </Box>
-
-        <Box
-          sx={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center ",
-            flexDirection: { xs: "column", sm: "column", lg: "row" },
-            gap: "0.5rem",
-          }}>
-          <Box sx={{ width: "100%", alignSelf: "flex-start" }}>
-            <Typography sx={{ whiteSpace: "break-spaces" }}>{text.about}</Typography>
-          </Box>
-
-          <Box component="img" sx={{ content: `url(${liorimg})`, width: { xs: "100%", sm: "50%", lg: "35%" } }} />
-        </Box>
-        <Box>
-          {" "}
-          <Typography sx={{ whiteSpace: "break-spaces", width: "100%", fontStyle: "italic" }}>
-            {text.aboutBottom}
-          </Typography>
-        </Box>
-      </AboutBox>
+      <About />
+      <NeuroConsult />
     </Box>
   );
 };
