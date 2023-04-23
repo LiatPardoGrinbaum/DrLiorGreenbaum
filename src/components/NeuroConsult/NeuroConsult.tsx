@@ -27,7 +27,7 @@ const NeuroConsult = () => {
     <AboutBox id="neuroConsult">
       <Box sx={{ width: "100%" }}>
         <Typography variant="h5" width="15rem" sx={{ borderBottom: "5px solid #2d8f91", alignSelf: "right" }}>
-          ייעוץ נוירולוגי
+          ייעוץ נוירוגנטי
         </Typography>
       </Box>
 
@@ -58,12 +58,12 @@ const NeuroConsult = () => {
             {text.neuroConsultationIntro}
           </Typography>
         </Box>
-        <Box sx={{ width: "100%" }}>
+        <Box sx={{ width: { sm: "100%", lg: "90%" }, alignSelf: "center" }}>
           <Typography variant="h6" sx={{ fontStyle: "bold", color: "primary.main" }}>
             תהליך הייעוץ:
           </Typography>
-          <Typography sx={{ whiteSpace: "break-spaces" }}>
-            <div dangerouslySetInnerHTML={{ __html: text.neuroConsultation1 }} />
+          <Typography sx={{ whiteSpace: "break-spaces" }} dangerouslySetInnerHTML={{ __html: text.neuroConsultation1 }}>
+            {/* <div dangerouslySetInnerHTML={{ __html: text.neuroConsultation1 }} /> */}
           </Typography>
           <Typography variant="h6" sx={{ fontStyle: "bold", color: "primary.main" }}>
             תפיסת עולמי המקצועית:

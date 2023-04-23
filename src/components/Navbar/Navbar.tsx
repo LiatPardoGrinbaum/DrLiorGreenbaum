@@ -86,9 +86,9 @@ const Navbar = () => {
               transform: "scale(1.1)",
             },
           }}>
-          <PhoneIcon color="success" fontSize="medium" href="tel:+9720506225790" sx={{ cursor: "pointer", ...boxSX }} />
-          <Typography component="a" href="tel:+9720506225790" sx={boxSX}>
-            050-622-5490
+          <PhoneIcon color="success" fontSize="medium" href="tel:+9720546290240" sx={{ cursor: "pointer", ...boxSX }} />
+          <Typography component="a" href="tel:+9720546290240" sx={boxSX}>
+            054-629-0240
           </Typography>
           <Typography
             variant="subtitle1"
@@ -110,13 +110,13 @@ const Navbar = () => {
           hideBackdrop={true}
           PaperProps={{
             sx: {
-              background: theme.palette.secondary.main,
+              background: theme.palette.secondary.light,
             },
           }}>
           <AppBar
             position="static"
             sx={{
-              background: theme.palette.secondary.main,
+              background: theme.palette.secondary.light,
               color: "text.primary",
             }}>
             <Toolbar sx={{ display: "flex", justifyContent: "space-between", padding: "0.8rem" }}>
@@ -130,17 +130,17 @@ const Navbar = () => {
           <Box display="flex" flexDirection="column">
             <ButtonHashLink linkto="/#home" text="בית" onClick={onCloseHandler} />
             <ButtonHashLink linkto="/#about" text=" אודות " onClick={onCloseHandler} />
-            <ButtonHashLink linkto="/#treatments" text=" טיפולים " onClick={onCloseHandler} />
-            <ButtonHashLink linkto="/#contact" text="צרי קשר" onClick={onCloseHandler} />
-            <ButtonHashLink linkto="/#aboutMe" text="  קצת עליי" onClick={onCloseHandler} />
+            <ButtonHashLink linkto="/#neuroConsult" text="  ייעוץ נוירוגנטי " onClick={onCloseHandler} />
+            <ButtonHashLink linkto="/#expertise" text="  תחומי התמחות" onClick={onCloseHandler} />
+            <ButtonHashLink linkto="/#tests" text="  סוגי בדיקות" onClick={onCloseHandler} />
+            <ButtonHashLink linkto="/#contact" text=" צרו קשר" onClick={onCloseHandler} />
           </Box>
         </Dialog>
 
         <Box sx={{ display: { xs: "none", md: "flex" } }}>
           <ButtonHashLink linkto="/#contact" text="צרו קשר" />
-
-          <ButtonHashLink linkto="/#about" text="  סוגי בדיקות" />
-          <ButtonHashLink linkto="/treatments" text=" תחומי התמחות" />
+          <ButtonHashLink linkto="/#tests" text="  סוגי בדיקות" />
+          <ButtonHashLink linkto="/#expertise" text=" תחומי התמחות" />
           <ButtonHashLink linkto="/#neuroConsult" text="  ייעוץ נוירוגנטי " />
           <ButtonHashLink linkto="/#about" text="אודות" />
           <ButtonHashLink linkto="/#home" text="  בית" />

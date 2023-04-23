@@ -13,6 +13,7 @@ const MainBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  padding: "1rem",
   gap: theme.spacing(5),
   direction: "rtl",
   textAlign: "center",
@@ -86,7 +87,7 @@ const Home = () => {
               <Typography
                 color="primary.light"
                 fontWeight="400"
-                sx={{ textShadow: "2px 2px 5px black", fontSize: "30px" }}>
+                sx={{ textShadow: "2px 2px 5px black", fontSize: { xs: "16px", sm: "30px" } }}>
                 Lior.Greenbaum@sheba.health.gov.il
               </Typography>
             </Box>
@@ -101,8 +102,8 @@ const Home = () => {
               <Typography
                 color="primary.light"
                 fontWeight="400"
-                sx={{ textShadow: "2px 2px 5px black", fontSize: "30px" }}>
-                03-00000000
+                sx={{ textShadow: "2px 2px 5px black", fontSize: { xs: "22px", sm: "30px" } }}>
+                054-629-0240
               </Typography>
             </Box>
           </Box>
