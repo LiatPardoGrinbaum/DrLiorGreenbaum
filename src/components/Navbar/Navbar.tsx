@@ -14,7 +14,7 @@ import { TransitionProps } from "@mui/material/transitions";
 import { StyledToolbar, CallBox, CustomMenuIcon } from "./styles";
 import { NavHashLink } from "react-router-hash-link";
 
-const boxSX = {
+export const boxSX = {
   textDecoration: "none",
   color: "black",
 };
@@ -90,11 +90,11 @@ const Navbar = () => {
           <Typography component="a" href="tel:+9720546290240" sx={boxSX}>
             054-629-0240
           </Typography>
-          <Typography
+          {/* <Typography
             variant="subtitle1"
             sx={{ fontSize: theme.typography.fontSize, color: theme.palette.primary.main }}>
-            {/* התקשר/י עכשיו */}
-          </Typography>
+             התקשר/י עכשיו 
+          </Typography> */}
           {/* <Typography component="a" href="https://wa.me/10524555527" sx={{ textDecoration: "none", color: "white" }}>
             whatsapp
           </Typography> */}
@@ -155,7 +155,6 @@ const Navbar = () => {
               flex: 1,
             }}>
             <Typography
-              variant="h6"
               display="block"
               fontWeight="600"
               color={theme.palette.primary.dark}
@@ -163,7 +162,7 @@ const Navbar = () => {
               ד"ר ליאור גרינבאום
             </Typography>
             <Typography fontWeight="600" color={theme.palette.primary.dark} sx={{ textDecoration: "none" }}>
-              MD phD Lior Greenbaum
+              MD Lior Greenbaum - PhD
             </Typography>
           </Box>
         </NavHashLink>

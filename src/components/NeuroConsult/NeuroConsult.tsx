@@ -1,7 +1,7 @@
 import { Box, styled, Typography } from "@mui/material";
 import { text } from "../../text/text";
 
-import { theme } from "../../theme";
+// import { theme } from "../../theme";
 
 const AboutBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -51,8 +51,8 @@ const NeuroConsult = () => {
             padding: { xs: "1rem", lg: "2rem 6rem" },
             margin: "1rem",
             borderRadius: "1rem",
-            borderBottom: `10px solid ${theme.palette.primary.main}`,
-            borderTop: `10px solid ${theme.palette.primary.main}`,
+            borderBottom: `10px solid #548199`,
+            borderTop: `10px solid #548199`,
           }}>
           <Typography sx={{ whiteSpace: "break-spaces", fontSize: { sm: "1.8rem" }, textAlign: "center" }}>
             {text.neuroConsultationIntro}

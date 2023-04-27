@@ -8,6 +8,7 @@ import About from "../About/About";
 import NeuroConsult from "../NeuroConsult/NeuroConsult";
 
 import "../Home/style.css";
+import Contact from "../Contact/Contact";
 
 const MainBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -91,18 +92,26 @@ const Home = () => {
                 Lior.Greenbaum@sheba.health.gov.il
               </Typography>
             </Box>
+
             <Box
               sx={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "0.5rem",
+                transition: "0.5s",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
               }}>
-              <LocalPhoneIcon sx={{ color: "white" }} />
+              <LocalPhoneIcon sx={{ color: "white", cursor: "pointer" }} href="tel:+9720546290240" />
+
               <Typography
+                component="a"
+                href="tel:+9720546290240"
                 color="primary.light"
                 fontWeight="400"
-                sx={{ textShadow: "2px 2px 5px black", fontSize: { xs: "22px", sm: "30px" } }}>
+                sx={{ textShadow: "2px 2px 5px black", fontSize: { xs: "22px", sm: "30px" }, textDecoration: "none" }}>
                 054-629-0240
               </Typography>
             </Box>
@@ -111,6 +120,7 @@ const Home = () => {
       </MainBox>
       <About />
       <NeuroConsult />
+      <Contact />
     </Box>
   );
 };

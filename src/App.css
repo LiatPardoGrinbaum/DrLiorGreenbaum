@@ -6,9 +6,10 @@
   width: 100%;
 }
 
-/* .buttonLinkNav {
-  font-weight: bold;
-  color: "white";
-  text-decoration: none;
-  font-family: "Assistant", sans-serif;
-} */
+.MuiInputBase-input {
+  background: white;
+}
+
+.MuiTextField-root {
+  background: white;
+}
