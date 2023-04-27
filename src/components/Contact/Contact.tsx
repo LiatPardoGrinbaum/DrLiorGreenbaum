@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 // import Title from "../../styles/Title";
 import { theme } from "../../theme";
 import ContactForm from "./ContactForm";
@@ -24,7 +24,6 @@ const Contact = () => {
       {/*   <Title fontColor="primary.dark" fontSize="2rem">
         צרו קשר
       </Title> */}
-
       {/*  <ContactDivs /> */}
       <Box
         sx={{
@@ -45,12 +44,58 @@ const Contact = () => {
           allowFullScreen={undefined}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"></iframe> */}
-      </Box>
-      <Box sx={{ borderRadius: "50%", width: "80px" }}>
-        <LocationOn sx={{ color: "primary.main" }} />
-      </Box>
-      <Box sx={{ borderRadius: "50%", width: "80px" }}>
-        <Phone sx={{ color: "primary.main" }} />
+      </Box>{" "}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          padding: "1rem",
+          gap: "2rem",
+          flexWrap: "wrap",
+        }}>
+        <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <LocationOn sx={{ color: "primary.main" }} />{" "}
+          <Typography
+            variant="subtitle1"
+            sx={{
+              fontSize: "1.4rem",
+              color: "primary.dark",
+              marginRight: "1rem",
+              [theme.breakpoints.down("sm")]: {
+                fontSize: "1.5rem",
+              },
+            }}>
+            בית הרופאים, כניסה א, הברזל 11 תל אביב, קומה 3, מרפאות דורי
+          </Typography>
+        </Box>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+
+            gap: "0.5rem",
+            transition: "0.5s",
+            "&:hover": {
+              transform: "scale(1.1)",
+            },
+          }}>
+          <Phone sx={{ color: "primary.main" }} />
+          <Typography
+            variant="subtitle1"
+            sx={{
+              fontSize: "1.4rem",
+              color: "primary.dark",
+              marginRight: "1rem",
+              [theme.breakpoints.down("sm")]: {
+                fontSize: "1.5rem",
+              },
+            }}>
+            052-330-8498
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );

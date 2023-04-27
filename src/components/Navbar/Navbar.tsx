@@ -88,7 +88,7 @@ const Navbar = () => {
           }}>
           <PhoneIcon color="success" fontSize="medium" href="tel:+9720546290240" sx={{ cursor: "pointer", ...boxSX }} />
           <Typography component="a" href="tel:+9720546290240" sx={boxSX}>
-            054-629-0240
+            052-330-8498
           </Typography>
           {/* <Typography
             variant="subtitle1"

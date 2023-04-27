@@ -104,15 +104,15 @@ const Home = () => {
                   transform: "scale(1.1)",
                 },
               }}>
-              <LocalPhoneIcon sx={{ color: "white", cursor: "pointer" }} href="tel:+9720546290240" />
+              <LocalPhoneIcon sx={{ color: "white", cursor: "pointer" }} href="tel:+9720523308498" />
 
               <Typography
                 component="a"
-                href="tel:+9720546290240"
+                href="tel:+9720523308498"
                 color="primary.light"
                 fontWeight="400"
                 sx={{ textShadow: "2px 2px 5px black", fontSize: { xs: "22px", sm: "30px" }, textDecoration: "none" }}>
-                054-629-0240
+                052-330-8498
               </Typography>
             </Box>
           </Box>
