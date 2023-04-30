@@ -2,6 +2,7 @@ import { Box, styled, Typography } from "@mui/material";
 import { text } from "../../text/text";
 import liorimg from "../../assets/liorimg.jpeg";
 // import { theme } from "../../theme";
+import styles from "./style.module.css";
 
 const AboutBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -25,7 +26,7 @@ const AboutBox = styled(Box)(({ theme }) => ({
 const About = () => {
   return (
     <AboutBox id="about">
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%" }} className={styles["about-container"]}>
         <Typography variant="h5" width="15rem" sx={{ borderBottom: "5px solid #2d8f91", alignSelf: "right" }}>
           אודות
         </Typography>

@@ -3,7 +3,7 @@ import { text } from "../../text/text";
 
 // import { theme } from "../../theme";
 
-const AboutBox = styled(Box)(({ theme }) => ({
+const NeuroBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -24,7 +24,7 @@ const AboutBox = styled(Box)(({ theme }) => ({
 
 const NeuroConsult = () => {
   return (
-    <AboutBox id="neuroConsult">
+    <NeuroBox id="neuroConsult">
       <Box sx={{ width: "100%" }}>
         <Typography variant="h5" width="15rem" sx={{ borderBottom: "5px solid #2d8f91", alignSelf: "right" }}>
           ייעוץ נוירוגנטי
@@ -58,7 +58,7 @@ const NeuroConsult = () => {
             {text.neuroConsultationIntro}
           </Typography>
         </Box>
-        <Box sx={{ width: { sm: "100%", lg: "90%" }, alignSelf: "center" }}>
+        <Box sx={{ width: "100%", alignSelf: "center" }}>
           <Typography variant="h6" sx={{ fontStyle: "bold", color: "primary.main" }}>
             תהליך הייעוץ:
           </Typography>
@@ -71,7 +71,7 @@ const NeuroConsult = () => {
           <Typography sx={{ whiteSpace: "break-spaces" }}>{text.neuroConsultation2}</Typography>
         </Box>
       </Box>
-    </AboutBox>
+    </NeuroBox>
   );
 };
 

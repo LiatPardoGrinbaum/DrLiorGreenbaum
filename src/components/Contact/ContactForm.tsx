@@ -15,8 +15,7 @@ const ContactUs = () => {
   const REACT_APP_SERVICE_ID: string = process.env.REACT_APP_SERVICE_ID!;
   const REACT_APP_TEMPLATE_ID: string = process.env.REACT_APP_TEMPLATE_ID!;
   const REACT_APP_USER_ID: string = process.env.REACT_APP_USER_ID!;
-  console.log(REACT_APP_SERVICE_ID);
-  console.log(REACT_APP_TEMPLATE_ID);
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!name || !email || !phone) {
@@ -26,7 +25,6 @@ const ContactUs = () => {
     } else if (phone.toString().length !== 10) {
       setError("יש להזין מספר פלאפון בעל 10 ספרות.");
     } else {
-      console.log(e.currentTarget);
       setName("");
       setEmail("");
       setPhone("");
