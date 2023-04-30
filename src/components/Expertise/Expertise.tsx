@@ -1,5 +1,6 @@
 import { Box, styled, Typography } from "@mui/material";
 import { expertise } from "../../text/text";
+import { theme } from "../../theme";
 
 const ExpertiseBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -37,18 +38,25 @@ const Expertise = () => {
         </Typography> */}
         {expertise.list.map((expertise) => {
           return (
-            <Typography sx={{ color: "primary.dark" }} key={expertise.subtitle}>
-              {expertise.subtitle}
+            <Box
+              sx={{
+                fontWeight: "bold",
+                fontFamily: theme.typography.fontFamily,
+                fontSize: "22.8px",
+                color: "primary.dark",
+              }}
+              key={expertise.subtitle}>
+              ✓ {expertise.subtitle}
               <Box sx={{ marginRight: "2rem" }}>
                 {expertise.types.map((type) => {
                   return (
-                    <li style={{ fontWeight: "normal" }} key={type}>
+                    <li style={{ fontWeight: "normal", listStyleType: "square" }} key={type}>
                       {type}
                     </li>
                   );
                 })}
               </Box>
-            </Typography>
+            </Box>
           );
         })}
 
