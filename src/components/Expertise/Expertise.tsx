@@ -1,5 +1,5 @@
 import { Box, styled, Typography } from "@mui/material";
-import { text } from "../../text/text";
+import { expertise } from "../../text/text";
 
 const ExpertiseBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -22,23 +22,37 @@ const ExpertiseBox = styled(Box)(({ theme }) => ({
 
 const Expertise = () => {
   return (
-    <ExpertiseBox id="neuroConsult">
+    <ExpertiseBox id="expertise">
       <Box sx={{ width: "100%" }}>
         <Typography variant="h5" width="15rem" sx={{ borderBottom: "5px solid #2d8f91", alignSelf: "right" }}>
           תחומי התמחות
         </Typography>
       </Box>
       <Box sx={{ width: "100%", alignSelf: "center" }}>
-        <Typography variant="h6" sx={{ fontStyle: "bold", color: "primary.main" }}>
-          תהליך הייעוץ:
+        <Typography variant="h6" sx={{ color: "primary.main" }}>
+          {expertise.title}
         </Typography>
-        <Typography sx={{ whiteSpace: "break-spaces" }} dangerouslySetInnerHTML={{ __html: text.neuroConsultation1 }}>
-          {/* <div dangerouslySetInnerHTML={{ __html: text.neuroConsultation1 }} /> */}
-        </Typography>
-        <Typography variant="h6" sx={{ fontStyle: "bold", color: "primary.main" }}>
-          תפיסת עולמי המקצועית:
-        </Typography>
-        <Typography sx={{ whiteSpace: "break-spaces" }}>{text.neuroConsultation2}</Typography>
+        {/*     <Typography sx={{ whiteSpace: "break-spaces" }} dangerouslySetInnerHTML={{ __html: text.neuroConsultation1 }}>
+          
+        </Typography> */}
+        {expertise.list.map((expertise) => {
+          return (
+            <Typography sx={{ color: "primary.dark" }} key={expertise.subtitle}>
+              {expertise.subtitle}
+              <Box sx={{ marginRight: "2rem" }}>
+                {expertise.types.map((type) => {
+                  return (
+                    <li style={{ fontWeight: "normal" }} key={type}>
+                      {type}
+                    </li>
+                  );
+                })}
+              </Box>
+            </Typography>
+          );
+        })}
+
+        <Typography sx={{ whiteSpace: "break-spaces" }}>{/* {text.neuroConsultation2} */}</Typography>
       </Box>
     </ExpertiseBox>
   );
