@@ -1,30 +1,10 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { text } from "../../text/text";
-
-// import { theme } from "../../theme";
-
-const NeuroBox = styled(Box)(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-  gap: theme.spacing(3),
-  direction: "rtl",
-  // textAlign: "center",
-  width: "100%",
-  padding: "2rem",
-  // background: theme.palette.primary.light,
-
-  [theme.breakpoints.down("lg")]: {
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "right",
-  },
-}));
+import { SectionContainer } from "../../styles/SectionContainer";
 
 const NeuroConsult = () => {
   return (
-    <NeuroBox id="neuroConsult">
+    <SectionContainer id="neuroConsult">
       <Box sx={{ width: "100%" }}>
         <Typography variant="h5" width="15rem" sx={{ borderBottom: "5px solid #2d8f91", alignSelf: "right" }}>
           ייעוץ נוירוגנטי
@@ -54,7 +34,7 @@ const NeuroConsult = () => {
             borderBottom: `10px solid #548199`,
             borderTop: `10px solid #548199`,
           }}>
-          <Typography sx={{ whiteSpace: "break-spaces", fontSize: { sm: "1.8rem" }, textAlign: "center" }}>
+          <Typography sx={{ whiteSpace: "break-spaces", fontSize: "1.5rem", textAlign: "center" }}>
             {text.neuroConsultationIntro}
           </Typography>
         </Box>
@@ -71,7 +51,7 @@ const NeuroConsult = () => {
           <Typography sx={{ whiteSpace: "break-spaces" }}>{text.neuroConsultation2}</Typography>
         </Box>
       </Box>
-    </NeuroBox>
+    </SectionContainer>
   );
 };
 

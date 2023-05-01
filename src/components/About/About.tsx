@@ -1,31 +1,13 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { text } from "../../text/text";
 import liorimg from "../../assets/liorimg.jpeg";
 // import { theme } from "../../theme";
 import styles from "./style.module.css";
-
-const AboutBox = styled(Box)(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-  gap: theme.spacing(3),
-  direction: "rtl",
-  // textAlign: "center",
-  width: "100%",
-  padding: "2rem",
-  // background: theme.palette.primary.light,
-
-  [theme.breakpoints.down("lg")]: {
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "right",
-  },
-}));
+import { SectionContainer } from "../../styles/SectionContainer";
 
 const About = () => {
   return (
-    <AboutBox id="about">
+    <SectionContainer id="about">
       <Box sx={{ width: "100%" }} className={styles["about-container"]}>
         <Typography variant="h5" width="15rem" sx={{ borderBottom: "5px solid #2d8f91", alignSelf: "right" }}>
           אודות
@@ -53,7 +35,7 @@ const About = () => {
           {text.aboutBottom}
         </Typography>
       </Box>
-    </AboutBox>
+    </SectionContainer>
   );
 };
 

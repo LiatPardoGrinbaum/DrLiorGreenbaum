@@ -1,29 +1,11 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { expertise } from "../../text/text";
 import { theme } from "../../theme";
-
-const ExpertiseBox = styled(Box)(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-  gap: theme.spacing(3),
-  direction: "rtl",
-  // textAlign: "center",
-  width: "100%",
-  padding: "2rem",
-  // background: theme.palette.primary.light,
-
-  [theme.breakpoints.down("lg")]: {
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "right",
-  },
-}));
+import { SectionContainer } from "../../styles/SectionContainer";
 
 const Expertise = () => {
   return (
-    <ExpertiseBox id="expertise">
+    <SectionContainer id="expertise">
       <Box sx={{ width: "100%" }}>
         <Typography variant="h5" width="15rem" sx={{ borderBottom: "5px solid #2d8f91", alignSelf: "right" }}>
           תחומי התמחות
@@ -62,7 +44,7 @@ const Expertise = () => {
 
         <Typography sx={{ whiteSpace: "break-spaces" }}>{/* {text.neuroConsultation2} */}</Typography>
       </Box>
-    </ExpertiseBox>
+    </SectionContainer>
   );
 };
 

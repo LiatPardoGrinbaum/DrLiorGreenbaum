@@ -10,6 +10,7 @@ import NeuroConsult from "../NeuroConsult/NeuroConsult";
 import "../Home/style.css";
 import Contact from "../Contact/Contact";
 import Expertise from "../Expertise/Expertise";
+import Tests from "../Tests/Tests";
 
 const MainBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -123,6 +124,8 @@ const Home = () => {
       <NeuroConsult />
       <Contact />
       <Expertise />
+      <Tests />
+      <Contact />
     </Box>
   );
 };
