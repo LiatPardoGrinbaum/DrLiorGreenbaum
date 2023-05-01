@@ -11,6 +11,7 @@ import "../Home/style.css";
 import Contact from "../Contact/Contact";
 import Expertise from "../Expertise/Expertise";
 import Tests from "../Tests/Tests";
+import Footer from "../Footer/Footer";
 
 const MainBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -122,10 +123,11 @@ const Home = () => {
       </MainBox>
       <About />
       <NeuroConsult />
-      <Contact />
+      <Contact id="" />
       <Expertise />
       <Tests />
-      <Contact />
+      <Contact id="contact" />
+      <Footer />
     </Box>
   );
 };

@@ -5,10 +5,14 @@ import { theme } from "../../theme";
 import ContactForm from "./ContactForm";
 import { LocationOn, Phone } from "@mui/icons-material";
 
-const Contact = () => {
+type ContactProp = {
+  id: string;
+};
+
+const Contact = (props: ContactProp) => {
   return (
     <Box
-      id="contact"
+      id={props.id}
       sx={{
         background: `linear-gradient( to right,${theme.palette.primary.light}, ${theme.palette.secondary.light})`,
         minHeight: "30vh",
