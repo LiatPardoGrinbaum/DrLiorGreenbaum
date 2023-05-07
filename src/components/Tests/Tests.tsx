@@ -20,15 +20,14 @@ const Tests = () => {
 
         {tests.list.map((test) => {
           return (
-            <React.Fragment>
+            <React.Fragment key={test.subtitle}>
               <Box
                 sx={{
                   fontWeight: "bold",
                   fontFamily: theme.typography.fontFamily,
                   fontSize: "22.8px",
                   color: "primary.dark",
-                }}
-                key={test.subtitle}>
+                }}>
                 {test.subtitle}
               </Box>
               <Box>
