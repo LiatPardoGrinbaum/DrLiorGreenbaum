@@ -22,6 +22,7 @@ const Footer = () => {
         href="https://github.com/LiatPardoGrinbaum"
         target="blank"
         sx={{
+          color: "primary.main",
           fontSize: "16px",
           fontFamily: `'Poppins', sans-serif`,
           textDecoration: "none",
