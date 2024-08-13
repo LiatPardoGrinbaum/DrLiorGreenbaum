@@ -67,7 +67,7 @@ const Home = () => {
             color="common.white"
             fontWeight="600"
             sx={{ fontSize: { xs: "45px", sm: "62px" }, textShadow: "2px 2px 5px black" }}>
-            ד"ר ליאור גרינבאום
+            פרופ' ליאור גרינבאום
           </Typography>
           <Typography
             color="common.white"

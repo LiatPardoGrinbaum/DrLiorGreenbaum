@@ -160,7 +160,7 @@ const Navbar = () => {
               fontWeight="600"
               color={theme.palette.primary.dark}
               sx={{ textDecoration: "none", lineHeight: "1.3rem" }}>
-              ד"ר ליאור גרינבאום
+              פרופ' ליאור גרינבאום
             </Typography>
             <Typography fontWeight="600" color={theme.palette.primary.dark} sx={{ textDecoration: "none" }}>
               Lior Greenbaum, MD PhD
